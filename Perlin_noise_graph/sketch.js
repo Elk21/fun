@@ -12,7 +12,7 @@ function setup() {
 
   // Fill array of points with initial values
   for (let i = 0; i < width - 50; i++) {
-    points.push(map(noise(xoff), 0, 1, 0, width));
+    points.push(map(noise(xoff, xoff +  100), 0, 1, 0, width));
     xoff += offset;
   }
 
