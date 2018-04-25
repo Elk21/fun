@@ -4,8 +4,8 @@ let slider;
 let movesPerformed = 0;
 
 const CELL_SIZE = 2;
-const WIDTH = 800;
-const HEIGHT = 800;
+const WIDTH = 600;
+const HEIGHT = 600;
 const ANTS_COUNT = 5;
 
 function setup() {

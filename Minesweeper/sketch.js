@@ -1,10 +1,19 @@
 /* 
     Minesweeper
     
+    to open cell press "LMB"
     to flag cell press "SPACE"
+
+
+    TODO:
+    1. Create winning solution
+    2. Add timer
+    3. Create option to generate field of given dimention
 */
 
-
+const W = 400;
+const H = 400;
+const cellSize = 40;
 
 let field, mines;
 let cols;
@@ -12,10 +21,7 @@ let rows;
 let minesCount = 0;
 let flagsCount = 0;
 
-const W = 400;
-const H = 400;
-const cellSize = 40;
-
+let div;
 let mcText;
 let fcText;
 let button;
@@ -27,8 +33,7 @@ function setup() {
     rows = floor(H / cellSize);
     field = createField();
 
-
-    let div = createDiv("");
+    div = createDiv("")
 
     button = createButton("Refresh");
     button.mousePressed(() => refresh());
@@ -88,7 +93,6 @@ function createField() {
 }
 
 function refresh() {
-
     flagsCount = 0;
     minesCount = 0;
 
